@@ -1,0 +1,16 @@
+1. Caching Consistency: https://redis.io/blog/three-ways-to-maintain-cache-consistency/#:~:text=Write%2Dthrough%20caching&text=In%20other%20words%2C%20instead%20of,back%20to%20the%20primary%20database.
+
+Note: Above article is for consistency only. We have 2 ways of writing to cache:
+a. Cache aside.
+b. Write through cache
+
+To make sure that my primary database and cache are consistent overall, we use following strategy:
+a. Cache invalidation: Used with Cache aside. Link: https://www.enjoyalgorithms.com/blog/cache-aside-caching-strategy
+b. Write through: Used with Write through cache strategy and data is immediately written to database.
+c. Write-behind caching: Used with Write through cache strategy and data is written to database in an async manner.
+
+*******************************************************
+
+2. Distributed caching: https://docs.aws.amazon.com/whitepapers/latest/database-caching-strategies-using-redis/caching-patterns.html#:~:text=A%20write%2Dthrough%20cache%20is,uses%20a%20remote%20distributed%20cache%20.
+
+*******************************************************
